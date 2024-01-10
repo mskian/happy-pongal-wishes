@@ -1,0 +1,43 @@
+{
+  "name": "happy-pongal-wishes",
+  "description": "Happy Ponagl Greeting Wishes image with Name - Happy Ponagl Greeting image Generator in Tamil and English.",
+  "private": true,
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "css": "tailwindcss -m -i ./styles/tailwind.css -o public/css/style.css",
+    "lint": "eslint . --ext .js --cache",
+    "lintfix": "eslint . --ext .js --fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,html}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mskian/happy-pongal-wishes.git"
+  },
+  "keywords": [
+    "wishes",
+    "Ponagl",
+    "2024"
+  ],
+  "author": "Santhosh Veer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mskian/happy-pongal-wishes/issues"
+  },
+  "homepage": "https://github.com/mskian/happy-pongal-wishes#readme",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "autoprefixer": "10.4.16",
+    "eslint": "^8.56.0",
+    "postcss": "^8.4.33",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.11"
+  },
+  "dependencies": {
+    "slugify": "^1.6.6"
+  }
+}
