@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -38,6 +38,10 @@
             referrerpolicy="no-referrer"
         ></script>
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
@@ -61,12 +65,72 @@
                     <div id="imgdata"></div>
                     <div id="result"></div>
                 </div>
+                <div id="result"></div>
                 <div id="lang">
+                    <div
+                        class="flex flex-wrap mt-4 mb-8 items-center justify-center"
+                        id="content-hide"
+                        style="overflow: auto"
+                        role="group"
+                    >
+                        <button
+                            class="rounded text-white bg-gradient-to-br from-green-500 to-green-400 hover:bg-gradient-to-bl font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 font-medium uppercase"
+                            id="dw-share"
+                        >
+                            🎁 Share
+                        </button>
+                        <button
+                            class="rounded text-white bg-gradient-to-br from-blue-500 to-blue-400 hover:bg-gradient-to-bl font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 font-medium uppercase"
+                            id="clipboardButton"
+                        >
+                            📋 Copy
+                        </button>
+                    </div>
                     <div id="form"></div>
                 </div>
             </div>
             <br />
         </div>
         <script type="module" src="/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', event => {
+                const dwshare = document.getElementById('dw-share');
+                const get_title = document.getElementsByTagName('title')[0];
+                const title = get_title.innerHTML;
+                const pathname =
+                    typeof window !== 'undefined' ? window.location.href : '';
+                const description = document
+                    .querySelector("meta[name='description']")
+                    .getAttribute('content');
+                if (dwshare) {
+                    dwshare.addEventListener('click', () => {
+                        if (navigator.share) {
+                            navigator
+                                .share({
+                                    title: title,
+                                    text: description,
+                                    url: pathname,
+                                })
+                                .then(() => {
+                                    console.log('Callback after sharing');
+                                })
+                                .catch(console.error);
+                        } else {
+                            Toastify({
+                                text: 'Native Web Share is not supported on desktop browser - Try to Download image and share.',
+                                duration: 2500,
+                                close: true,
+                                gravity: 'bottom',
+                                position: 'center',
+                                style: {
+                                    background: '#FC427B',
+                                },
+                            }).showToast();
+                        }
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

@@ -1,1 +1,1 @@
-import "./lib/canva.js";
+import './lib/canva.js';
