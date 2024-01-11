@@ -8,7 +8,16 @@ Happy பொங்கல் Greeting Wishes image with Name - Happy Pongal Greet
 
 > Happy Pongal Greeting image Maker with Name  
 
-- Live Site - <https://pongal.tamilwords.net>
+Wishing you a  
+harvest of joy and prosperity  
+this Pongal May  
+the warmth of the season  
+fill your home with happiness  
+and the abundance of the  
+harvest brings  
+success in your endeavors.  
+
+- Live Site - **<https://pongal.tamilwords.net>**
 
 ## Methods Used ⚙
 
@@ -79,6 +88,17 @@ yarn Format
 - Pongal kavithai
 - Pongal kavithai in tamil
 - Pongal wishes in tamil fonts
+
+***
+
+புது வெற்றிகள்  
+புது நம்பிக்கை  
+புது ஆரம்பம்  
+என தன்நம்பிக்கையுடன்  
+இந்த இனிமையான  
+பொங்கல் திருநாளில்  
+உங்கள் வாழ்க்கையில்  
+மகிழ்ச்சி பொங்கட்டும்
 
 ***
 
